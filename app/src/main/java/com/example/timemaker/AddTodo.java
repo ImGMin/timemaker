@@ -12,7 +12,6 @@ public class AddToDo extends AppCompatActivity {
     Button addToDodelete_B;
     Button addToDoreturn_B;
 
-    //BoxLayoutAxis;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
