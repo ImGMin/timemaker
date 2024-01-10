@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddToDo">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="예정 시각"
-        app:layout_constraintBottom_toTopOf="@+id/addToDo_starttime"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.926" />
-
 
     <EditText
+        android:id="@+id/editText"
         android:layout_width="411dp"
         android:layout_height="47dp"
         android:hint="날짜"
@@ -40,7 +30,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.082" />
+        app:layout_constraintVertical_bias="0.082" >
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/addToDo_name"
@@ -52,18 +42,8 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-2dp" />
 
-    <EditText
-        android:id="@+id/addToDo_starttime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="08:00"
-        android:inputType="datetime"
-        app:layout_constraintBottom_toTopOf="@+id/addToDodelete_B"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.294"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.256" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <EditText
         android:id="@+id/addToDo_finishtime"
@@ -71,46 +51,116 @@
         android:layout_height="wrap_content"
         android:hint="08:50"
         android:inputType="datetime"
-        app:layout_constraintBottom_toTopOf="@+id/addToDocomplete_B"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.775"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.255" />
-
-    <Button
-        android:id="@+id/addToDocomplete_B"
-        android:layout_width="136dp"
-        android:layout_height="47dp"
-        android:text="확인"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.873"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-        app:layout_constraintVertical_bias="0.927" />
-
-    <Button
-        android:id="@+id/addToDodelete_B"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:text="삭제"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-        app:layout_constraintVertical_bias="0.927" />
-
-    <Button
-        android:id="@+id/addToDoreturn_B"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="취소"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/addToDocomplete_B"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toEndOf="@+id/addToDodelete_B"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toEndOf="@+id/addToDo_starttime"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934" />
+        app:layout_constraintVertical_bias="0.3" />
+
+    <EditText
+        android:id="@+id/addToDo_starttime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="08:00"
+        android:inputType="datetime"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:text="예정 시각"
+        app:layout_constraintBottom_toTopOf="@+id/addToDo_starttime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="410dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        app:boxBackgroundColor="@color/black"
+        app:boxBackgroundMode="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974">
+
+        <Button
+            android:id="@+id/addToDoreturn_B"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:text="취소"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/addToDocomplete_B"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toEndOf="@+id/addToDodelete_B"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.934" />
+
+        <Button
+            android:id="@+id/addToDodelete_B"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="36dp"
+            android:layout_weight="1"
+            android:text="삭제"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintVertical_bias="0.927" />
+
+        <Button
+            android:id="@+id/addToDocomplete_B"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            android:text="확인"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.873"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintVertical_bias="0.927" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="413dp"
+        android:layout_height="115dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        tools:layout_editor_absoluteX="-3dp">
+
+        <TextView
+            android:id="@+id/textdoingtime"
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="예상 소요 시각" />
+
+        <EditText
+            android:id="@+id/addToDo_doingtime"
+            android:layout_width="410dp"
+            android:layout_height="57dp"
+            android:layout_weight="3"
+            android:hint="08:50"
+            android:inputType="datetime" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
