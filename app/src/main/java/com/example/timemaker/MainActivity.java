@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         addToDo = findViewById(R.id.addToDo);
         addToDo.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(),  AddToDo.class);
+                Intent intent = new Intent(getApplicationContext(),  AddTodo.class);
                 startActivity(intent);
             }
         });
