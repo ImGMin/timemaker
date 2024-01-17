@@ -12,15 +12,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         addToDo = findViewById(R.id.addToDo);
         addToDo.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(),  AddToDo.class);
+                Intent intent = new Intent(getApplicationContext(),  AddTodo.class);
                 startActivity(intent);
             }
         });
     }
-    }
+
+
+}
+

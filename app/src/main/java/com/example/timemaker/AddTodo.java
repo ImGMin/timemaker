@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AddToDo extends AppCompatActivity {
+public class AddTodo extends AppCompatActivity {
     Button addToDocomplete_B;
     Button addToDodelete_B;
     Button addToDoreturn_B;
