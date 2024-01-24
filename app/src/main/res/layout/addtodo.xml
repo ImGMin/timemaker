@@ -62,7 +62,7 @@
                     app:layout_constraintVertical_bias="0.0"
                     tools:ignore="MissingConstraints" />
 
-                <androidx.appcompat.widget.SwitchCompat
+                <Switch
                     android:id="@+id/addToDoswitch"
                     android:layout_width="100dp"
                     android:layout_height="48dp"
@@ -93,15 +93,19 @@
                     android:layout_width="411dp"
                     android:layout_height="100dp"
                     android:background="#8D8D8D"
+                    android:visibility="invisible"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <EditText
                     android:id="@+id/addToDo_starttime"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
+                    android:clickable="false"
                     android:hint="08:00"
                     android:inputType="datetime"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -115,6 +119,7 @@
                     android:id="@+id/addToDo_finishtime"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
+                    android:clickable="false"
                     android:hint="08:50"
                     android:inputType="datetime"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -155,10 +160,13 @@
                     android:layout_width="411dp"
                     android:layout_height="100dp"
                     android:background="#8D8D8D"
+                    android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:id="@+id/textdoingtime"
@@ -179,6 +187,8 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
+                    android:clickable="false"
+                    android:focusable="auto"
                     android:hint="01:00"
                     android:inputType="datetime"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -203,6 +213,18 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0">
 
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:text="장소"
+                    app:layout_constraintBottom_toTopOf="@+id/editText2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.053"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.384" />
+
                 <EditText
                     android:id="@+id/editText2"
                     android:layout_width="match_parent"
@@ -216,17 +238,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1.0" />
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="10dp"
-                    android:text="장소"
-                    app:layout_constraintBottom_toTopOf="@+id/editText2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.053"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.384" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -236,14 +247,17 @@
     </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button"
         android:layout_width="411dp"
         android:layout_height="70dp"
-        android:layout_marginTop="650dp"
+        android:layout_marginBottom="5dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97"
         tools:context=".MainActivity"
         tools:showIn="@layout/activity_main">
 
