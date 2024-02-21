@@ -7,12 +7,16 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.identity.android.legacy.Utility;
+import com.kakao.sdk.common.KakaoSdk;
+
 public class MainActivity extends AppCompatActivity {
     Button addToDo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        KakaoSdk.init(this, "{ef52769f9ba38d3a4cda5e4869c9e8db}");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
